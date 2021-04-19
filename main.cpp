@@ -6,9 +6,10 @@ int main(int argc, char **argv){
         return 1;
     }
     Counter counter(argv[1]);
-    counter.count_first_file();
-
-
+    counter.start_counter();
+    counter.show_result();
+    std::cout << '\n'
+              << counter.words_in_folder() <<'\n';
     return 0;
 
 }
