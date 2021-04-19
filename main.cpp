@@ -6,6 +6,9 @@ int main(int argc, char **argv){
         return 1;
     }
     Counter counter(argv[1]);
-    counter.print_files();
+    counter.count_first_file();
+
+
     return 0;
+
 }

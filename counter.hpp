@@ -13,17 +13,16 @@ using namespace boost;
 
 class Counter{
     private:
-
         std::queue<std::string> files_queue;
         std::string folder_path;
-
         std::queue<std::string> fill_files_queue(std::string);
         long long get_words_count(std::string);
-
     public:
         Counter();
+        void count_first_file();
         Counter(std::string);
         void print_files();
+
 
 };
 

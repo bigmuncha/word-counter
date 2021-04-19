@@ -45,9 +45,9 @@ void Counter::print_files(){
     files_queue = temp;
 }
 
-long long get_words_count(std::string path){
+long long Counter::get_words_count(std::string path){
     std::ifstream file(path);
-    long long i;
+    long long i=0;
     std::string word;
     if(file.is_open()){
         while(file >> word){
@@ -56,5 +56,11 @@ long long get_words_count(std::string path){
     }else{
         std::cout << "not open\n";
     }
+    file.close();
     return i;
+}
+
+void Counter::count_first_file(){
+    std::cout << files_queue.front() <<'\n';
+    std::cout <<get_words_count(files_queue.front()) << '\n';
 }
